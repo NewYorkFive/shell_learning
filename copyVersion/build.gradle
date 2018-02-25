@@ -1,0 +1,42 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.1'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        google()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    minSdkVersion = 16
+    androidCompileSdkVersion = 27
+    androidBuildToolsVersion = '27.0.2'
+    targetSdkVersion = 27
+
+    releaseVersionCode = 1
+    releaseVersionName = "1.8.0.1-20180225-1548R"
+
+    baseVersionName = "\"PI_iLiveBase-20180224-1815-1801\""
+    aacVersionName = "\"0.1.5-20171107\""
+    mcVersionName = "\"1.8.0.1-20180225R02\""
+    pslVersionName = "\"1.8.0.1-20180225R01\""
+    psdVersionName = "\"1.8.0.1-201802241700\""
+    ijkVersionName = "\"1.8.0.1-201802251530\""
+}
